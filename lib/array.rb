@@ -1,5 +1,7 @@
 class Array
   def xmap &block
-    # You solution here
+    reduce([]) do |memo, value|
+      memo << block.call(value)
+    end
   end
 end
